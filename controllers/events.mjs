@@ -1,4 +1,4 @@
-import events from '../db/events';
+import events from '../db/events.mjs';
 
 class EventsController {
   getAllEvents(req, res) {

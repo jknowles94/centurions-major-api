@@ -33,13 +33,12 @@
 // app.listen(port, () => console.log(`listening on port ${port}`));
 
 //Google firebase end
-
 import express from 'express';
 import bodyParser from 'body-parser';
-const PORT = 5000;
-import router from './routes/index';
+import router from './routes/index.mjs';
 //Dummy data to build rest of web app before implement database
 import cors from 'cors';
+const PORT = 5000;
 
 const app = express();
 app.use(cors());
