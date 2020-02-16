@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/jknowles94/centurion-majors.git"
   },
-  "engines": {
-    "node": "13.8.0"
-  },
   "author": "Jake Knowles",
   "license": "ISC",
   "bugs": {
