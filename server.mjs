@@ -38,7 +38,7 @@ import bodyParser from 'body-parser';
 import router from './routes/index.mjs';
 //Dummy data to build rest of web app before implement database
 import cors from 'cors';
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
