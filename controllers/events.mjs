@@ -30,10 +30,15 @@ class EventsController {
         success: false,
         message: 'An event requires a name.'
       });
-    } else if (!req.body.winner_id && isNaN(req.body.winner_id)) {
+    } else if (!req.body.winner_id) {
       return res.status(400).send({
         success: false,
         message: 'An event requires a winner_id.'
+      });
+    } else if(isNaN(req.body.winner_id)) {
+      return res.status(400).send({
+        success: false,
+        message: 'Field winner_id should be an integer.'
       });
     } else if (!req.body.results || !req.body.results.length <= 0) {
       return res.status(400).send({
