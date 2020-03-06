@@ -2,6 +2,9 @@
 To run the server locally
 ``` Yarn start ```
 
+## Todo
+Add typescript to app for better error handling and my own sanity
+
 ## API structure
 
 ``` GET: api/users ```
