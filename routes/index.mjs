@@ -6,6 +6,8 @@ const router = express.Router();
 
 //Get users Items
 router.get('/api/users', UserController.getAllUsers);
+//Get Single User
+router.get('/api/user/:id', UserController.getSingleUser);
 //create user
 router.post('/api/user', UserController.createUser);
 

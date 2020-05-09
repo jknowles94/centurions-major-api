@@ -8,6 +8,22 @@ class UserController {
       users: users
     });
   }
+  getSingleUser(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const index = users.findIndex((el) => el.id === id);
+    if (index != -1) {
+      return res.status(200).send({
+        success: true,
+        message: 'User retrieved',
+        user: users[index]
+      });
+    }
+
+    return res.status(404).send({
+      success: false,
+      message: 'User does not exist'
+    });
+  }
   createUser(req, res) {
     if (!req.body.name) {
       return res.status(400).send({
